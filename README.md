@@ -28,4 +28,13 @@ References
 - reversing string - https://www.w3schools.com/python/python_howto_reverse_string.asp
 - returning every second letter of string - https://stackoverflow.com/questions/48873854/python-printing-ever-other-letter-of-a-word
 
+------------------------------------------------------------
+Weekly task 4 (11/02/21)
 
+Given - Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation. At each step calculate the next value by taking the current value and, if it is even, divide it by two, but if it is odd, multiply it by three and add one. Have the program end if the current value is one.
+
+Issues
+- Testing for number being even
+- While loop
+
+--------------------------------------------------------------
