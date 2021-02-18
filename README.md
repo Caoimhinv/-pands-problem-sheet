@@ -38,3 +38,15 @@ Issues
 - While loop
 
 --------------------------------------------------------------
+Weekly task 5 (18/02/21)
+
+Given - Write a program that outputs whether or not today is a weekday.
+
+Issues
+- finding out what day it is
+- how to differentiate between weekday and weekend efficiently
+
+References
+- https://stackoverflow.com/questions/29384696/how-to-find-current-day-is-weekday-or-weekends-in-python
+
+----------------------------------------------------------------
