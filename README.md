@@ -58,21 +58,21 @@ Given - Write a program that outputs whether or not today is a weekday.
 *Process* - ??????
 
 *Code*
-<import random>
+    <import random>
 
-<def sqrt():>
-    <L=[]>
-    <global number>
-    <number = float(input("Enter a postive number: "))>
-    <A = random.uniform(1, number)>
-    <while len(L) < 100:>
-        <A = 0.5 * ((number / A) + A)>
-        <L.append(A)>
-    <return L>
+    <def sqrt():>
+        <L=[]>
+        <global number>
+        <number = float(input("Enter a postive number: "))>
+        <A = random.uniform(1, number)>
+        <while len(L) < 100:>
+            <A = 0.5 * ((number / A) + A)>
+            <L.append(A)>
+        <return L>
 
-<result = sqrt() #calling the function>
-<roundedResult = round(result[99], 1)>
-<print("The square root of ", number, "is approximately ", roundedResult)>
+    <result = sqrt() #calling the function>
+    <roundedResult = round(result[99], 1)>
+    <print("The square root of ", number, "is approximately ", roundedResult)>
 
 References
 - https://www.school-for-champions.com/algebra/square_root_approx.htm#.YDuQ6i2l1pR
