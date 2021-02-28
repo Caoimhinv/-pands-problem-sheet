@@ -1,8 +1,9 @@
-# -pands-problem-sheet
-Weekly problem sheets
+# Pands Problem Sheets
+---
+## Weekly problem sheets
 
 -----------------------------------------------------------
-Weekly task 2 (27/01/21):
+## Weekly task 2 (27/01/21):
 
 Given - Write a program that calculates somebody's Body Mass Index (BMI). Call the file bmi.py
 
@@ -17,7 +18,7 @@ References
 - 2 decimal places - https://stackoverflow.com/questions/18781344/printing-a-variable-value-to-2-decimal-places
 
 -----------------------------------------------------------
-Weekly task 3 (06/02/21)
+## Weekly task 3 (06/02/21)
 
 Given - Write a program that takes asks a user to input a string and outputs every second letter in reverse order.
 
@@ -29,7 +30,7 @@ References
 - returning every second letter of string - https://stackoverflow.com/questions/48873854/python-printing-ever-other-letter-of-a-word
 
 ------------------------------------------------------------
-Weekly task 4 (11/02/21)
+## Weekly task 4 (11/02/21)
 
 Given - Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation. At each step calculate the next value by taking the current value and, if it is even, divide it by two, but if it is odd, multiply it by three and add one. Have the program end if the current value is one.
 
@@ -38,7 +39,7 @@ Issues
 - While loop
 
 --------------------------------------------------------------
-Weekly task 5 (18/02/21)
+## Weekly task 5 (18/02/21)
 
 Given - Write a program that outputs whether or not today is a weekday.
 
@@ -50,3 +51,30 @@ References
 - https://stackoverflow.com/questions/29384696/how-to-find-current-day-is-weekday-or-weekends-in-python
 
 ----------------------------------------------------------------
+## Weekly Task 6 (27/01/21)
+
+Given - Write a program that takes a positive floating-point number as input and outputs an approximation of its square root. You should create a function called <tt>sqrt</tt> that does this. I am asking you to create your own sqrt function and not to use the built in functions x ** .5 or math.sqrt(x). This is to demonstrate that you can research and code a process (If you really needed the square root you would use one of the above methods). I suggest that you look at the newton method at estimating square roots.
+
+Process - ??????
+
+Code
+<import random
+
+def sqrt():
+    L=[]
+    global number # gives me access to the number outside of the function
+    number = float(input("Enter a postive number: "))
+    A = random.uniform(1, number) # generates a random positve number lower than the inputted number
+    while len(L) < 100: # reiterate the calculation - this could be increased for huge numbers?
+        A = 0.5 * ((number / A) + A) # Newton's calculation
+        L.append(A) # adds each new number to the list L. 
+    return L
+
+result = sqrt() #calling the function
+roundedResult = round(result[99], 1) # accessing the last item in the list which should be
+                                    # the most accurate. And then rounding to 1 decimal place.
+print("The square root of ", number, "is approximately ", roundedResult)>
+
+References
+- https://www.school-for-champions.com/algebra/square_root_approx.htm#.YDuQ6i2l1pR
+- 
