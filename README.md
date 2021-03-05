@@ -98,9 +98,9 @@
 
 ### Process 
 There were two separate challenges in this task - coming up with a theoretical solution to the brief, and then putting that in code.
-Newton's Method relies on the user guessing a number close to where they thought the square root lay, and then a few reiterations of the formula would narrow it down. There was no mention of a second user input request in the brief so I had to come with a workaround. I decided to use the random uniform module to choose a random floating point number between 1 and the user's inputted number, and then just using an excessive number of iterations to narrow down the most extreme examples.
-Using a while loop I settled on 100 iterations which seemed to cater for the most extreme examples I could think of. This could obviously be increased if really necessary.
-I created a list within the functions to store the results, although it's only the last item in the list I actually need.
+Newton's Method relies on the user guessing a number close to where they thought the square root lay, and then a few reiterations of the formula would narrow it down. There was no mention of a second user input request in the brief so I had to come with a workaround. I decided to use the random uniform module to choose a random floating point number between 1 and the user's inputted number, and then just using enough iterations to narrow it down. For the example given of 14.5, a few iterations would suffice, but for more extreme numbers a lot of iterations would be needed.  
+So using a while loop I settled on 100 iterations which seemed to cater for any number I could think of within reason! This could obviously be increased if really necessary.
+I created a list within the function to store the results, although it's only the last item in the list I actually need.
 
 ### Code 
 
