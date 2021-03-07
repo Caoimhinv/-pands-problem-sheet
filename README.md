@@ -84,7 +84,7 @@
 ### References  
 - how to find if weekday or weekend - https://stackoverflow.com/questions/29384696/how-to-find-current-day-is-weekday-or-weekends-in-python
 
-## Weekly Task 6 (27/01/21)
+## Weekly Task 6 (27/02/21)
 
 ### Task  
 >*"Write a program that takes a positive floating-point number as input and outputs an approximation of its square root. You should create a function called <tt>sqrt</tt> that does this. I am asking you to create your own sqrt function and not to use the built in functions x ** .5 or math.sqrt(x). This is to demonstrate that you can research and code a process (If you really needed the square root you would use one of the above methods). I suggest that you look at the newton method at estimating square roots."*
@@ -127,3 +127,26 @@ I created a list within the function to store the results, although it's only th
 - functions - https://www.w3schools.com/python/python_functions.asp
 - rounding numbers - https://www.w3schools.com/python/ref_func_round.asp
 - random float - https://stackoverflow.com/questions/6088077/how-to-get-a-random-number-between-a-float-range
+
+## Weekly Task 7 (07/03/21)
+
+### Task
+>*Write a program that reads in a text file and outputs the number of e's it contains.
+
+The program should take the filename from an argument on the command line.*
+
+### Issues
+???
+
+### Process
+???
+
+### Code
+    
+    import sys
+    with open(sys.argv[1], 'r') as textFile:
+    contents = textFile.read() 
+    numberOfEs = contents.count("e") 
+    print ("There are {} 'e's in this file".format(numberOfEs))
+
+### References
