@@ -131,9 +131,9 @@ I created a list within the function to store the results, although it's only th
 ## Weekly Task 7 (07/03/21)
 
 ### Task
->*Write a program that reads in a text file and outputs the number of e's it contains.
+>*"Write a program that reads in a text file and outputs the number of e's it contains.
 
-The program should take the filename from an argument on the command line.*
+>The program should take the filename from an argument on the command line."*
 
 ### Issues
 ???
