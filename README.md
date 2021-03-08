@@ -161,15 +161,17 @@ The results are stored in a **list** within the function. When the function **sq
 - printing the result
 
 ### Process
-At the time of writing, a lot of this was new, so research was required! The **sys** module seemed the most appropriate way to deal with arguments in the command line. **sys.argv[1]** allowed 2 arguments in the command line - the programme/script (es.py) and the filename (e.g. phadThai.txt). 'r' lets us read the file - although this is probably unneccesary as it is the default anyway.
+At the time of writing, a lot of this was new, so research was required! The **sys** module seemed the most appropriate way to deal with arguments in the command line. **sys.argv[1]** allowed 2 arguments in the command line - the programme/script (es.py) and the filename (e.g. phadThai.txt). **'r'** lets us read the file and **'t'** specifices that it is text (as opposed to binary) - although this is probably unneccesary as both are the default values anyway.
 The user would enter into the command line:
-    python es.py phadThai.txt.
+
+    `python es.py phadThai.txt`
+
 From here we're on more familiar territory - we **read()** the file, use the **count()** method to count the number of 'e's, and then **print()** the result.
 
 ### Code
     
     import sys
-    with open(sys.argv[1], 'r') as textFile:
+    with open(sys.argv[1], 'rt') as textFile:
     contents = textFile.read() 
     numberOfEs = contents.count("e") 
     print ("There are {} 'e's in this file".format(numberOfEs))
