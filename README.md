@@ -10,6 +10,9 @@
 - formula for calculating BMI
 - rounding up to 2 decimal places
 
+### Process
+???
+
 ### Code 
 
     height_metres = height / 100
@@ -19,6 +22,8 @@
 ### References
 - 2 decimal places - https://stackoverflow.com/questions/18781344/printing-a-variable-value-to-2-decimal-places
 
+---
+
 ## Weekly task 3 (06/02/21)
 
 ### Task 
@@ -26,6 +31,9 @@
 
 ### Issues 
 - functions for reversing string and for printing out every second letter
+
+### Process
+???
 
 ### Code
     
@@ -38,6 +46,8 @@
 - reversing string - https://www.w3schools.com/python/python_howto_reverse_string.asp
 - returning every second letter of string - https://stackoverflow.com/questions/48873854/python-printing-ever-other-letter-of-a-word
 
+---
+
 ## Weekly task 4 (11/02/21)
 
 ### Task
@@ -46,6 +56,9 @@
 ### Issues
 - Testing for number being even
 - While loop
+
+### Process
+???
 
 ### Code 
 
@@ -59,7 +72,9 @@
         print(number)
 
 ### References 
--
+- ???
+
+---
 
 ## Weekly task 5 (18/02/21)
 
@@ -69,6 +84,9 @@
 ### Issues 
 - finding out what day it is
 - how to differentiate between weekday and weekend efficiently
+
+### Process
+???
 
 ### Code 
 
@@ -84,6 +102,8 @@
 ### References  
 - how to find if weekday or weekend - https://stackoverflow.com/questions/29384696/how-to-find-current-day-is-weekday-or-weekends-in-python
 
+---
+
 ## Weekly Task 6 (27/02/21)
 
 ### Task  
@@ -98,9 +118,9 @@
 
 ### Process 
 There were two separate challenges in this task - coming up with a theoretical solution to the brief, and then putting that in code.
-Newton's Method relies on the user guessing a number close to where they thought the square root lay, and then a few reiterations of the formula would narrow it down. There was no mention of a second user input request in the brief so I had to come with a workaround. I decided to use the random uniform module to choose a random floating point number between 1 and the user's inputted number, and then just using enough iterations to narrow it down. For the example given of 14.5, a few iterations would suffice, but for more extreme numbers a lot of iterations would be needed.  
-So using a while loop I settled on 100 iterations which seemed to cater for any number I could think of within reason! This could obviously be increased if really necessary.
-I created a list within the function to store the results, although it's only the last item in the list I actually need.
+Newton's Method relies on the user guessing a number close to where they thought the square root lay, and then a few reiterations of the formula would narrow it down. There was no mention of a second user input request in the brief so I had to come with a workaround. I decided to use the **random.uniform()** module to choose a random floating point number between 1 and the user's inputted number, and then just using enough iterations to narrow it down. For the example given of 14.5, a few iterations would suffice, but for more extreme numbers a lot of iterations would be needed.  
+So using a **while** loop I settled on 100 iterations which seemed to cater for any number I could think of within reason! This could obviously be increased if really necessary.
+The results are stored in a **list** within the function. When the function **sqrt()** is called we only need the last entry in the list which we **round()** to 1 decimal place as seems implied in the brief.
 
 ### Code 
 
@@ -128,16 +148,23 @@ I created a list within the function to store the results, although it's only th
 - rounding numbers - https://www.w3schools.com/python/ref_func_round.asp
 - random float - https://stackoverflow.com/questions/6088077/how-to-get-a-random-number-between-a-float-range
 
+---
+
 ## Weekly Task 7 (07/03/21)
 
 ### Task
 >*"Write a program that reads in a text file and outputs the number of e's it contains. The program should take the filename from an argument on the command line."*
 
 ### Issues
-???
+- accessing the text file
+- counting the number of e's
+- printing the result
 
 ### Process
-???
+At the time of writing, a lot of this was new, so research was required! The **sys** module seemed the most appropriate way to deal with arguments in the command line. **sys.argv[1]** allowed 2 arguments in the command line - the programme/script (es.py) and the filename (e.g. phadThai.txt). 'r' lets us read the file - although this is probably unneccesary as it is the default anyway.
+The user would enter into the command line:
+    python es.py phadThai.txt.
+From here we're on more familiar territory - we **read()** the file, use the **count()** method to count the number of 'e's, and then **print()** the result.
 
 ### Code
     
@@ -148,3 +175,6 @@ I created a list within the function to store the results, although it's only th
     print ("There are {} 'e's in this file".format(numberOfEs))
 
 ### References
+- ???
+
+---
