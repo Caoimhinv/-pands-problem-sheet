@@ -75,6 +75,7 @@
 
 ### References 
 - while loops - https://www.w3schools.com/python/python_while_loops.asp
+- user inputing - https://www.w3schools.com/python/python_user_input.asp
 
 ---
 
@@ -88,7 +89,7 @@
 - how to differentiate between weekday and weekend efficiently
 
 ### Process
-???
+We being by importing the **datetime** module. Within that, **datetime.today()** gives us the day today. The **weekday()** method lets us represent the days of the week as integers from 0-6 from Monday. So then we use a **while** loop, where if the day of the week is less than 5 (Friday or before), it prints the statement *"Still a bloody weekday!! :("*. Otherwise it prints *"Praise the lord it's the weekend!!! :)"*.
 
 ### Code 
 
@@ -229,4 +230,4 @@ A big clue was given in the weekly labs so the coding element of this was straig
 - numpy - https://www.w3schools.com/python/numpy_intro.asp
 
 ---
-                    # THE END
+# THE END
