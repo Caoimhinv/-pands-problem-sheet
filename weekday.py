@@ -11,6 +11,6 @@ whatDayIsIt = datetime.datetime.today().weekday()
 
 # if less than 5, i.e. Mon-Fri
 if whatDayIsIt < 5:
-    print ("Still a weekday!! :(")
+    print ("Still a bloody weekday!! :(")
 else:  # otherwise it's 5/6 which is Sat/Sun
     print ("Praise the lord it's the weekend!!! :)")
