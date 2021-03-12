@@ -156,9 +156,8 @@ The results are stored in a **list** within the function. When the function **sq
 >*"Write a program that reads in a text file and outputs the number of e's it contains. The program should take the filename from an argument on the command line."*
 
 ### Issues
-- accessing the text file
+- accessing and reading the text file
 - counting the number of e's
-- printing the result
 
 ### Process
 At the time of writing, a lot of this was new, so research was required! The **sys** module seemed the most appropriate way to deal with arguments in the command line. **sys.argv[1]** allowed 2 arguments in the command line - the programme/script (es.py) and the filename (e.g. phadThai.txt). **'r'** lets us read the file and **'t'** specifices that it is text (as opposed to binary) - although this is probably unneccesary as both are the default values anyway.
@@ -180,3 +179,51 @@ From here we're on more familiar territory - we **read()** the file, use the **c
 - ???
 
 ---
+
+## Weekly Task 8 (12/03/21)
+
+### Task
+>*"Write a program called plottask.py that displays a plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes. Some marks will be given for making the plot look nice."*
+
+### Issues
+- 
+- 
+
+### Process
+????
+
+### Code
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+    xpoints = np.array(range(0, 4))
+
+    ypoints = xpoints
+    plt.plot(xpoints, ypoints, c = '#8B008B', label = "f(x)=x", marker = 'o', ms = 10, mec = '#FFE4C4', mfc = '#FFE4C4', ls = ':', lw = 2)
+
+    xpoints = np.array(range(0, 4))
+    ypoints = (xpoints ** 2)
+    plt.plot(xpoints, ypoints, c = '#00008B', label = "g(x)=x^2", marker = 'o', ms = 10, mec = '#7FFFD4', mfc = '#7FFFD4', ls = '--', lw = 2)
+
+    xpoints = np.array(range(0, 4))
+    ypoints = (xpoints ** 3)
+    plt.plot(xpoints, ypoints, c = '#696969', label = "h(x)=x^3", marker = 'o', ms = 10, mec = 'hotpink', mfc = 'hotpink', ls = '-.', lw = 2)
+
+
+    font1 = {'family':'serif','color':'#696969','size':20}
+    font2 = {'family':'serif','color':'#00008B','size':15}
+
+    plt.title("Week 08 Plot Task", fontdict = font1, loc = 'left') 
+    plt.xlabel("x axis", fontdict = font2)
+    plt.ylabel("y axis", fontdict = font2)
+    plt.grid()
+    plt.legend(loc = 'upper left')
+    plt.show() 
+
+### References
+- matplotlib - https://www.w3schools.com/python/matplotlib_intro.asp
+- numpy - https://www.w3schools.com/python/numpy_intro.asp
+
+---
+# THE END
