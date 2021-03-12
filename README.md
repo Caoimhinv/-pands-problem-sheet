@@ -1,6 +1,11 @@
-# Pands Weekly Problem Sheets
+# 'Pands' Weekly Problem Sheets - Caoimhin Vallely
+## GMIT Higher Diploma in Science - Data Analytics
+## Module - Programming and Scripting
+## Semester 1 - January-May 2021
 
-## Weekly task 2 (27/01/21)
+---
+
+## Weekly task 01 - Week 02 (27/01/21)
 
 ### Task 
 >*"Write a program that calculates a persons Body Mass Index (BMI). Call the file bmi.py. The inputs are the person's height in centimetres and weight in kilograms. The output is their weight divided by their height in metres squared."*
@@ -24,7 +29,7 @@
 
 ---
 
-## Weekly task 3 (06/02/21)
+## Weekly task 02 - Week 03 (06/02/21)
 
 ### Task 
 >*"Write a program that takes asks a user to input a string and outputs every second letter in reverse order."*
@@ -48,7 +53,7 @@
 
 ---
 
-## Weekly task 4 (11/02/21)
+## Weekly task 03 - Week04 (11/02/21)
 
 ### Task
 >*"Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation. At each step calculate the next value by taking the current value and, if it is even, divide it by two, but if it is odd, multiply it by three and add one. Have the program end if the current value is one."*
@@ -76,7 +81,7 @@
 
 ---
 
-## Weekly task 5 (18/02/21)
+## Weekly task 04 - Week 05 (18/02/21)
 
 ### Task
 >*"Write a program that outputs whether or not today is a weekday."*
@@ -104,7 +109,7 @@
 
 ---
 
-## Weekly Task 6 (27/02/21)
+## Weekly Task 05 - Week 06 (27/02/21)
 
 ### Task  
 >*"Write a program that takes a positive floating-point number as input and outputs an approximation of its square root. You should create a function called <tt>sqrt</tt> that does this. I am asking you to create your own sqrt function and not to use the built in functions x ** .5 or math.sqrt(x). This is to demonstrate that you can research and code a process (If you really needed the square root you would use one of the above methods). I suggest that you look at the newton method at estimating square roots."*
@@ -150,7 +155,7 @@ The results are stored in a **list** within the function. When the function **sq
 
 ---
 
-## Weekly Task 7 (07/03/21)
+## Weekly Task 06 - Week 07 (07/03/21)
 
 ### Task
 >*"Write a program that reads in a text file and outputs the number of e's it contains. The program should take the filename from an argument on the command line."*
@@ -180,7 +185,7 @@ From here we're on more familiar territory - we **read()** the file, use the **c
 
 ---
 
-## Weekly Task 8 (12/03/21)
+## Weekly Task 07 - Week 08 (12/03/21)
 
 ### Task
 >*"Write a program called plottask.py that displays a plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes. Some marks will be given for making the plot look nice."*
@@ -226,4 +231,4 @@ From here we're on more familiar territory - we **read()** the file, use the **c
 - numpy - https://www.w3schools.com/python/numpy_intro.asp
 
 ---
-# THE END
+<p style="text-align: center;"> THE END </p>
