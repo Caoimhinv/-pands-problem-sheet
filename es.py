@@ -13,8 +13,9 @@
 import sys
 
 # accesses and allows the programme to 'read' the text file from the command line
-with open(sys.argv[1], 'r') as textFile: # sys.argv[1] refers to 2 arguments in the command line,
+with open(sys.argv[1], 'rt') as textFile: # sys.argv[1] refers to 2 arguments in the command line,
                                          # i.e. 1. programme (es.py) and 2. filename (e.g. phadThai.txt)
+                                         # 'rt' lets us 'read' the file and specifices 'text' as opposed to binary
     contents = textFile.read() # reads the content of the file
     numberOfEs = contents.count("e") # uses 'count' method to count number of "e"s.
                                     # I'm assuming that it's just lower case 'e' that is required
