@@ -1,4 +1,4 @@
-# Pands Weekly Problem Sheets - Caoimhin Vallely
+# Programming and Scripting - Weekly Problem Sheets
 
 ---
 
@@ -13,15 +13,20 @@
 - rounding up to 2 decimal places
 
 ### Process
-???
+We start by using the built in **input** function to ask the user to enter their weight and height. The brief asked for the input to be cemtimetres so I needed to convert that input to metres which I stored in the variable **height_metres** for that. We then enter each of the inputed elements into the formula. The brief hinted that the answer should be rounded to 2 decimal so I used the **round()** function to achieve that. I finally printed the result.
 
 ### Code 
 
+    weight = float(input('Please enter your weight in kgs?'))
+    height = float(input('Please enter your height in cms?'))
+    
     height_metres = height / 100
     bmi = round(weight / (height_metres ** 2), 2)
     print('Your bmi is ' + str(bmi))
 
 ### References
+- variables - https://www.w3schools.com/python/python_variables.asp
+- user input - https://www.w3schools.com/python/python_user_input.asp
 - round - https://stackoverflow.com/questions/18781344/printing-a-variable-value-to-2-decimal-places
 
 ---
@@ -35,13 +40,13 @@
 - functions for reversing string and for printing out every second letter
 
 ### Process
-???
+We start by using the **input** function to ask the user to enter a string sentence. We reverse the sentence by using a **slice** that steps backwards **[::-1]** and store the result in a variable called **sentenceReverse**. We then skip every second letter of this with a similar idea **[::2]** and store the result in a variable called **sentenceSkip**, which we then print.
 
 ### Code
     
     sentence = input('Please enter a string sentence: ')
-    sentenceReverse = sentence[::-1] # reverses the sentence
-    sentenceSkip = sentenceReverse[::2] # prints every second letter
+    sentenceReverse = sentence[::-1]
+    sentenceSkip = sentenceReverse[::2]
     print(sentenceSkip)
 
 ### References 
@@ -89,7 +94,7 @@
 - how to differentiate between weekday and weekend efficiently
 
 ### Process
-We being by importing the **datetime** module. Within that, **datetime.today()** gives us the day today. The **weekday()** method lets us represent the days of the week as integers from 0-6 from Monday. So then we use a **while** loop, where if the day of the week is less than 5 (Friday or before), it prints the statement *"Still a bloody weekday!! :("*. Otherwise it prints *"Praise the lord it's the weekend!!! :)"*.
+We begin by importing the **datetime** module. Within that, **datetime.today()** gives us the day today. The **weekday()** method lets us represent the days of the week as integers from 0-6 from Monday. So then we use a **while** loop, where if the day of the week is less than 5 (Friday or before), it prints the statement *"Still a bloody weekday!! :("*. Otherwise it prints *"Praise the lord it's the weekend!!! :)"*.
 
 ### Code 
 
@@ -196,24 +201,30 @@ From here we're on more familiar territory - we **read()** the file, use the **c
 
 ### Process
 A big clue was given in the weekly labs so the coding element of this was straight forward enough. I spent most of my time exploring the formatting possibilities! If this was an important bit of data for presentation I would obviously have toned it down and focused on the clearest way to present and visualise the data. Here I took the opportunity to try out colours, line style, linesize, markers, marker formatting, label formatting and positioning.
+We import the **NumPy** libray which allows us to perform calculations on an entire array. **Matplotlib** lets us draw the plots.
+We create a **numpy.array** from 0 to 5 on the x axis (5 as opposed to 4 as the upper **range** limit is non-inclusive). I worked out the code for each of the formulas and then formatted whatever plot elements I could.
+I also included all the various labels and legend, also with some formatting.
 
 ### Code
 
     import numpy as np
     import matplotlib.pyplot as plt
 
-    xpoints = np.array(range(0, 4))
+    xpoints = np.array(range(0, 5))
 
     ypoints = xpoints
-    plt.plot(xpoints, ypoints, c = '#8B008B', label = "f(x)=x", marker = 'o', ms = 10, mec = '#FFE4C4', mfc = '#FFE4C4', ls = ':', lw = 2)
+    plt.plot(xpoints, ypoints, c = '#8B008B', label = "f(x)=x", marker = 'o', 
+    ms = 10, mec = '#FFE4C4', mfc = '#FFE4C4', ls = ':', lw = 2)
 
-    xpoints = np.array(range(0, 4))
+    xpoints = np.array(range(0, 5))
     ypoints = (xpoints ** 2)
-    plt.plot(xpoints, ypoints, c = '#00008B', label = "g(x)=x^2", marker = 'o', ms = 10, mec = '#7FFFD4', mfc = '#7FFFD4', ls = '--', lw = 2)
+    plt.plot(xpoints, ypoints, c = '#00008B', label = "g(x)=x^2", marker = 'o', 
+    ms = 10, mec = '#7FFFD4', mfc = '#7FFFD4', ls = '--', lw = 2)
 
-    xpoints = np.array(range(0, 4))
+    xpoints = np.array(range(0, 5))
     ypoints = (xpoints ** 3)
-    plt.plot(xpoints, ypoints, c = '#696969', label = "h(x)=x^3", marker = 'o', ms = 10, mec = 'hotpink', mfc = 'hotpink', ls = '-.', lw = 2)
+    plt.plot(xpoints, ypoints, c = '#696969', label = "h(x)=x^3", marker = 'o', 
+    ms = 10, mec = 'hotpink', mfc = 'hotpink', ls = '-.', lw = 2)
 
     font1 = {'family':'serif','color':'#696969','size':20}
     font2 = {'family':'serif','color':'#00008B','size':15}
