@@ -65,7 +65,7 @@ We start by using the **input** function to ask the user to enter a string sente
 - While loop
 
 ### Process
-???
+The first line of code asks the user to input a positive integer with the built in **input** function. I then use a **while loop** to firstly test if the number is even (dividible by two with no remainder) and if so it gets divided by 2. If not it gets multiplied by 3 and one added. The loop continues until the value is 1.
 
 ### Code 
 
