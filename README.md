@@ -176,13 +176,20 @@ The user would enter into the command line:
 
 From here we're on more familiar territory - we **read()** the file, use the **count()** method to count the number of 'e's, and then **print()** the result.
 
+UPDATE: after week 09 lectures I've added a bif of try/except! Will explain more shortly! :)
+
 ### Code
     
     import sys
-    with open(sys.argv[1], 'rt') as textFile:
-    contents = textFile.read() 
-    numberOfEs = contents.count("e") 
-    print ("There are {} 'e's in this file".format(numberOfEs))
+    try: 
+        with open(sys.argv[1], 'rt') as textFile:                       
+            contents = textFile.read() 
+            numberOfEs = contents.count("e") 
+            print ("There are {} 'e's in this file".format(numberOfEs))
+    except IOError: 
+        print("I can't seem to find your file? If it's in the same folder just enter <<filename.txt>>, if it's elsewhere enter the full path.")
+    except IndexError:
+        print("Did you enter a file in the command line?")
 
 ### References
 - file handling - https://www.w3schools.com/python/python_file_handling.asp
