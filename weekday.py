@@ -1,4 +1,7 @@
-# Write a program that outputs whether or not today is a weekday.
+# Problem Task 04 - Week05
+
+# This program outputs whether or not today is a weekday
+
 # Author: Caoimhin Vallely
 
 # imports datetime module

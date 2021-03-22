@@ -1,3 +1,5 @@
+# Problem Task 05 - Week06
+
 # Write a program that takes a positive floating-point number as input and outputs an approximation of its square root.
 # You should create a function called <tt>sqrt</tt> that does this.
 # I am asking you to create your own sqrt function and not to use the built in functions x ** .5 or math.sqrt(x)
@@ -9,15 +11,15 @@ import random
 
 def sqrt():
     L=[]
-    global number # gives me access to the number outside of the function
-    number = float(input("Enter a postive number: "))
-    A = random.uniform(1, number) # generates a random positve number lower than the inputted number
+    global user_number # gives me access to the number outside of the function
+    user_number = float(input("Enter a postive number: "))
+    A = random.uniform(1, user_number) # generates a random positve number lower than the inputted number
     while len(L) < 100: # reiterate the calculation - this could be increased for huge numbers?
-        A = 0.5 * ((number / A) + A) # Newton's calculation
+        A = 0.5 * ((user_number / A) + A) # Newton's calculation
         L.append(A) # adds each new number to the list L. 
     return L
 
 result = sqrt() #calling the function
 roundedResult = round(result[99], 1) # accessing the last item in the list which should be
                                     # the most accurate. And then rounding to 1 decimal place.
-print("The square root of ", number, "is approximately ", roundedResult)
+print("The square root of ", user_number, "is approximately ", roundedResult)

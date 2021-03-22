@@ -1,10 +1,13 @@
-# Week 08 Weekly Problem Task
-# Write a program called plottask.py that displays a plot of the functions 
-# f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes.
+# Problem Task 07 - Week08
+
+# This program displays a plot of the functions f(x)=x, g(x)=x2 
+# and h(x)=x3 in the range [0, 4] on the one set of axes.
+
 # Author: Caoimhin Vallely
 
 # importing NumPy for the sums (creating and performing calculations on arrays) 
-# and Matplotlib for the plot. As per convention and economy of space I'm importing 
+# and matplotlib.pyplot for the plot. 
+# As per convention and economy of space I'm importing 
 # these as 'np' and 'plt' respectively
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,22 +20,22 @@ import matplotlib.pyplot as plt
 xpoints = np.array(range(0, 4))
 # f(x)=x interpreted as y = x
 ypoints = xpoints
-# Creates the first plot. I've formatted colour (c), label, marker (o), marker size (ms), 
-# marker surround colour(mec), marker colour (mfc), line style (ls), and line width (lw).
-plt.plot(xpoints, ypoints, c = '#8B008B', label = "f(x)=x", marker = 'o', ms = 10, 
-    mec = '#FFE4C4', mfc = '#FFE4C4', ls = ':', lw = 2)
+# Creates the first plot. I've formatted colour (c), label, marker type (o), marker size (ms), 
+# marker edge colour(mec), marker face colour (mfc), line style (ls), and line width (lw).
+plt.plot(xpoints, ypoints, c = '#8B008B', label = "f(x)=x", marker = 'o', ms = 10, mew = 5,
+    mec = 'cornflowerblue', mfc = 'lightcyan', ls = ':', lw = 2)
 
 # g(x)=x2 interpreted as y = x squared
 ypoints = (xpoints ** 2)
 # Creates the second plot. Formatted elements as above with some variations
-plt.plot(xpoints, ypoints, c = '#00008B', label = "g(x)=x^2", marker = 'o', ms = 10, 
-    mec = '#7FFFD4', mfc = '#7FFFD4', ls = '--', lw = 2) # creates the plot with some nice formatting
+plt.plot(xpoints, ypoints, c = '#00008B', label = "g(x)=x^2", marker = 'o', ms = 10, mew = 5, 
+    mec = 'indianred', mfc = 'gold', ls = '--', lw = 2) # creates the plot with some nice formatting
 
 # h(x)=x3 interpreted as y = x cubed
 ypoints = (xpoints ** 3)
 # Creates the third plot. Formatted elements as above with some variations
-plt.plot(xpoints, ypoints, c = '#696969', label = "h(x)=x^3", marker = 'o', ms = 10, 
-    mec = 'hotpink', mfc = 'hotpink', ls = '-.', lw = 2) # creates the plot with some nice formatting
+plt.plot(xpoints, ypoints, c = '#696969', label = "h(x)=x^3", marker = 'o', ms = 10, mew = 5,
+    mec = 'rebeccapurple', mfc = 'hotpink', ls = '-.', lw = 2) # creates the plot with some nice formatting
 
 # Creating variables for font styles - type, colour, and size
 font1 = {'family':'serif','color':'#696969','size':20}

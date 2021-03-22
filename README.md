@@ -199,12 +199,13 @@ I worked out the code for each of the formulas and then formatted the various pl
 - label = name/label of data
 - marker = marker at integer intersections
 - ms = marker size
-- mec = marker colour
-- mfc = marker border colour
+- mew = marker edge width
+- mec = marker edge colour
+- mfc = marker face colour
 - ls = line style
 - lw = line width
 
-I also included all the various labels, heading, and legend, also with some formatting.  
+I've included all the various labels, heading, and legend, also with some formatting, plus incorporated a grid (**plt.grid()**) for ease of reading results.
 I've saved a **png** file of the resultant plot in the repositry - **plotTask.png**
 
 ### Code
