@@ -1,23 +1,22 @@
 # Problem Task 07 - Week08
 
 # This program displays a plot of the functions f(x)=x, g(x)=x2 
-# and h(x)=x3 in the range [0, 4] on the one set of axes.
+# and h(x)=x3 in the range [0, 5] on the one set of axes.
 
 # Author: Caoimhin Vallely
 
-# importing NumPy for the sums (creating and performing calculations on arrays) 
+# importing the NumPy library for the sums (creating and performing calculations on arrays) 
 # and matplotlib.pyplot for the plot. 
 # As per convention and economy of space I'm importing 
 # these as 'np' and 'plt' respectively
 import numpy as np
 import matplotlib.pyplot as plt
 
-# I'm setting the range on the x axis from 0 to 3 - this seems implied in the way it is
-# written in the brief - range [0,4] with a non-inclusive upper register.
-# However the range function normally uses round brackets so was conflicted!
+# I'm setting the range on the x axis as [0,5] which will result in 0 to 4 which I think was
+# the intention in the brief
 
-# This creates a NumPy array in the range (0,4), ie 0 to 3. I only need to create this once.
-xpoints = np.array(range(0, 4))
+# This creates a NumPy array in the range (0,5), ie 0 to 4. I only need to create this once.
+xpoints = np.array(range(0, 5))
 # f(x)=x interpreted as y = x
 ypoints = xpoints
 # Creates the first plot. I've formatted colour (c), label, marker type (o), marker size (ms), 
@@ -48,5 +47,5 @@ plt.ylabel("y axis", fontdict = font2) # lables the y axis and specifies font st
 plt.grid() # prints grid lines for ease of viewing intersections
 plt.legend(loc = 'upper left') # prints the legend in the top left hand corner. Default 
                                # was top right which was obscuring some of the info
-plt.xlim(0,3.1) # extends the x axis a little bit so we can see the full marker clearly
+plt.xlim(0,4.1) # extends the x axis a little bit so we can see the full marker clearly
 plt.show() # displays the plot
