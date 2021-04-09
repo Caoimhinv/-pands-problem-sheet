@@ -1,25 +1,27 @@
 # Problem Task 05 - Week06
 
-# Write a program that takes a positive floating-point number as input and outputs an approximation of its square root.
-# You should create a function called <tt>sqrt</tt> that does this.
-# I am asking you to create your own sqrt function and not to use the built in functions x ** .5 or math.sqrt(x)
-# I suggest that you look at the newton method at estimating square roots
+# Author: Caoimhin Vallely
+
+# This program takes a users inputted number and returns an approximation of its square root using the Newton method. 
+# Use of built-in functions was forbidden!
 
 # Newton's method involves a guess which I don't think was in the remit of this task
-# so I'm going with a random number and lots of reiterations of the calculation.
-import random
+# so I'm going with a random number and lots of iterations of the formula.
 
-def sqrt():
-    L=[]
-    global user_number # gives me access to the number outside of the function
-    user_number = float(input("Enter a postive number: "))
-    A = random.uniform(1, user_number) # generates a random positve number lower than the inputted number
-    while len(L) < 100: # reiterate the calculation - this could be increased for huge numbers?
-        A = 0.5 * ((user_number / A) + A) # Newton's calculation
-        L.append(A) # adds each new number to the list L. 
-    return L
+import random # imports random module
 
-result = sqrt() #calling the function
-roundedResult = round(result[99], 1) # accessing the last item in the list which should be
-                                    # the most accurate. And then rounding to 1 decimal place.
-print("The square root of ", user_number, "is approximately ", roundedResult)
+# defining the function <<sqrt>>
+def sqrt(A):
+    A = random.uniform(1, user_number) # generates a random positve number between 1 and the inputted number
+    for i in range(100): # sets it up to run the formula 100 times
+        A = 0.5 * ((user_number / A) + A) # interpretted version of newton's method
+    return A
+
+# main program
+user_number = float(input("Please enter a postive number: ")) # asks user to enter a number and converts it to a float
+if user_number < 0: # bit of error handling
+    print ("I said a POSITIVE number!!")
+else:
+    result = sqrt(user_number) # calls the function and runs the users inputted number through it
+    rounded_result = round(result, 1) # rounds the result to 1 decimal place as suggested in brief
+    print("The square root of ", user_number, "is approximately ", rounded_result) # prints the answer
