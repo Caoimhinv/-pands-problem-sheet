@@ -1,5 +1,4 @@
-# Problem Task 02 - Week03
-
+# Problem Task 02 (06/02/21)
 
 # This is a program that asks a user to input a string sentence 
 # which is outputted in reverse order with every second letter skipped

@@ -1,4 +1,4 @@
-# Problem Task 06 - Week07
+# Problem Task 06 (07/03/21)
 
 # This program reads in a text file in the command line
 # and outputs the number of 'e's contained in it.
@@ -12,18 +12,18 @@
 # or else the full filepath is required
 # I've included phadThai.txt in the reposity here as an example text file
 
-# importing the sys module to allow arguments in the command line
+# importing the sys module to handle arguments in the command line
 import sys
 
 try: # Error handling - I'm including this to mitigate against incorrect entries in the command line.
      # Might be just me but I think this could be a common issue! 
 
-    with open(sys.argv[1], 'rt') as textFile: # sys.argv[1] refers to 2 arguments in the command line,
+    with open(sys.argv[1], 'rt') as text_file: # sys.argv[1] refers to 2 arguments in the command line,
                                          # i.e. the 1st [0] will be the program (es.py) and 2nd [1] the filename (e.g. phadThai.txt) or file path
                                          # (e.g /Users/caoimhinvallely/Desktop/GMIT Weekly Tasks/Pands-problem-sheet/phadThai.txt)
                                          # 'rt' lets us 'read' the file and specifices 'text' as opposed to binary
                                          # contents are stored as 'textfile'
-        contents = textFile.read() # this reads the content of the file and stores it in the variable 'contents'
+        contents = text_file.read() # this reads the content of the file and stores it in the variable 'contents'
         number_of_es = contents.count("e") # uses 'count' method to count number of "e"s.
                                     # I'm assuming that it's just lower case 'e' that is required
                                     # although including capital 'E' would be quite straightforward.

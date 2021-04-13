@@ -1,4 +1,4 @@
-# Problem Task 07 - Week08
+# Problem Task 07 (12/03/21)
 
 # This program displays a plot of the functions f(x)=x, g(x)=x2 
 # and h(x)=x3 in the range [0, 5] on the one set of axes.

@@ -1,4 +1,4 @@
-# Problem Task 03 - Week04
+# Problem Task 03 (11/02/21)
 
 # This program asks the user to input any positve integer.
 # At each step it calculates the next value 
@@ -14,8 +14,8 @@ number = int(input("Please enter a positive integer: "))
 
 # the while loop
 while (number != 1): # stops program when number hits 1
-    if number % 2 == 0: # checking if number is even 
-        number = number // 2 # if so divided it by 2
+    if number % 2 == 0: # checks if number is even 
+        number = number // 2 # if so divides it by 2
     else:
         number = (number * 3) + 1 # if not, multiplies it by 3 and adds 1
     print(number) # prints the result
