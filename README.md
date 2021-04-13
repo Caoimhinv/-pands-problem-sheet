@@ -1,10 +1,10 @@
-# Programming and Scripting - Weekly Problem Sheets  
+# Programming and Scripting - Weekly Tasks
 
 ## Caoimhin Vallely  
 
 ---
 
-## Task 01 - Week 02 (27/01/21)
+## Task 01 (27/01/21)
 - **bmi.py**
 
 ### Task 
@@ -28,7 +28,7 @@ We start by using the built-in **input()** function to ask the user to enter the
 
 ---
 
-## Task 02 - Week 03 (06/02/21)
+## Task 02 (06/02/21)
 - **secondString.py**
 
 ### Task 
@@ -51,7 +51,7 @@ We start by using the **input()** function to invite the user to enter a string 
 
 ---
 
-## Task 03 - Week04 (11/02/21)
+## Task 03 (11/02/21)
 - **collatz.py**
 
 ### Task
@@ -77,7 +77,7 @@ The first line of code asks the user to input a positive integer with the built 
 
 ---
 
-## Task 04 - Week 05 (18/02/21)
+## Task 04 (18/02/21)
 - **weekday.py**
 
 ### Task
@@ -101,7 +101,7 @@ We begin by importing the **datetime** module. From within that, **datetime.toda
 
 ---
 
-## Task 05 - Week 06 (27/02/21)
+## Task 05 (27/02/21)
 - **squareRoot.py**
 
 ### Task  
@@ -138,7 +138,7 @@ For the main program the user is asked to input a positive number which is conve
 - range function - https://www.w3schools.com/python/ref_func_range.asp
 ---
 
-## Task 06 - Week 07 (07/03/21)
+## Task 06 (07/03/21)
 - **es.py**
 - **phadThai.txt**
 
@@ -181,7 +181,7 @@ I've included a txt file in the repositry called **phadThai.py** to test the pro
 
 ---
 
-## Task 07 - Week 08 (12/03/21)
+## Task 07 (12/03/21)
 - **plotTask.py**
 - **plotTask.png**
 
