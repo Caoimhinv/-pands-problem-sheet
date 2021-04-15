@@ -43,9 +43,9 @@ font2 = {'family':'serif','color':'#00008B','size':15}
 plt.title("Week 08 Plot Task", fontdict = font1, loc = 'left') # gives the plot a main title and 
                                                                # defines font style and positioning
 plt.xlabel("x axis", fontdict = font2) # labels the x axis and specifies font style
-plt.ylabel("y axis", fontdict = font2) # lables the y axis and specifies font style
+plt.ylabel("y axis", fontdict = font2) # labels the y axis and specifies font style
 plt.grid() # prints grid lines for ease of viewing intersections
 plt.legend(loc = 'upper left') # prints the legend in the top left hand corner. Default 
                                # was top right which was obscuring some of the info
-plt.xlim(-0.1,4.1) # extends the x axis a little bit so we can see the full marker clearly
-plt.show() # displays the plot
+plt.xlim(-0.1,4.1) # extends the x axis a little bit either side so we can see the full markers clearly
+plt.show() # prints the plot
