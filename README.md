@@ -11,7 +11,7 @@
 >*"Write a program that calculates a persons Body Mass Index (BMI). Call the file bmi.py. The inputs are the person's height in centimetres and weight in kilograms. The output is their weight divided by their height in metres squared."*
 
 ### Process
-We start by using the built-in **input()** function to ask the user to enter their weight and height, which are then stored in 2 variables - **weight** and **height**. The brief asked for the input to be cemtimetres so I needed to convert the height variable to metres which I stored in another variable **height_metres**. We then enter each of the inputted elements into the formula. The brief hinted that the answer should be rounded to 2 decimal places so I used the **round()** function to achieve that. The result is then printed.
+We start by using the built-in **input()** function to ask the user to enter their weight and height, which are then stored in 2 variables - **weight** and **height**. The brief asked for the input to be centimetres so I needed to convert the height variable to metres which I stored in another variable **height_metres**. We then enter each of the inputted values into the formula. The brief hinted that the answer should be rounded to 2 decimal places so I used the **round()** function to achieve that. The result is then printed.
 
 ### Code 
 
@@ -35,7 +35,7 @@ We start by using the built-in **input()** function to ask the user to enter the
 >*"Write a program that asks a user to input a string and outputs every second letter in reverse order."*
 
 ### Process
-We start by using the **input()** function to invite the user to enter a string sentence, which is stored in the variable **sentence**. We reverse the sentence by using a **slice** that steps backwards **[::-1]** and store the result in the variable **sentence_reverse**. We then skip every second letter of this using a similar method **[::2]** and store the result in a variable called **sentence_skip**, which we then print.
+We start by using the **input()** function to invite the user to enter a string sentence, which is stored in the variable **sentence**. We reverse the sentence by using a **slice** that steps backwards **[::-1]**, and store the result in the variable **sentence_reverse**. We then skip every second letter of this using a similar method **[::2]** and store the result in a variable called **sentence_skip**, which we then print.
 
 ### Code
     
@@ -58,7 +58,7 @@ We start by using the **input()** function to invite the user to enter a string 
 >*"Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation. At each step calculate the next value by taking the current value and, if it is even, divide it by two, but if it is odd, multiply it by three and add one. Have the program end if the current value is one."*
 
 ### Process
-The first line of code asks the user to input a positive integer with the built in **input()** function. I then use a **while** loop to firstly test **if** the number is even (modulo division (**%**) by two with 0 remainder), and if so, it gets divided by 2. If not (**else**) it gets multiplied by 3 and 1 added. The **while** loop only continues as long as the number is not equal (**!=**) to 1, at which point the program terminates.
+The first line of code asks the user to input a positive integer with the built in **input()** function. I then use a **while** loop to firstly test **if** the number is even (modulo division (**%**) by two with 0 remainder), and if so, it gets divided by 2. If not (**else**) it gets multiplied by 3 and 1 added. The **while** loop only continues as long as the number is not equal (**!=**) to 1, at which point the program terminates ad the series of numbers is printed.
 
 ### Code 
 
@@ -108,10 +108,10 @@ We begin by importing the **datetime** module. From within that, **datetime.toda
 >*"Write a program that takes a positive floating-point number as input and outputs an approximation of its square root. You should create a function called <tt>sqrt</tt> that does this. I am asking you to create your own sqrt function and not to use the built in functions x ** .5 or math.sqrt(x). This is to demonstrate that you can research and code a process (If you really needed the square root you would use one of the above methods). I suggest that you look at the newton method at estimating square roots."*
 
 ### Process 
-There were two separate challenges in this task - coming up with a theoretical solution to the brief, and then putting that into code.
-Newton's Method relies on the user guessing a number close to where they thought the square root lay, and then a few reiterations of the formula would narrow it down. There was no mention of a second user input request in the brief, so I had to come with a workaround. I decided to use the **random.uniform()** module to choose a random floating point number between 1 and the user's inputted number, and then just to use enough iterations to narrow it down. For the example given of 14.5, a few iterations would suffice, but for more extreme numbers a lot of iterations would be needed.  
-I had a few attempts at this!
-Each time though I began by importing the **random** module which will let me initialise a random number to calculate against. A function which I named **sqrt()**, is then defined. The first element is the creation of a random number between 1 and the user's number is generated by the **random.uniform()** function. This is stored a variable **A**. My first effort involved running the user's inputted number and the random number **A** through the formula 100 times and **appending** all the results to a **list**. I'd then call the last element in the list as the result. On further investigation I realised I didn't need to store all of the results so I used the **i in range()** method to set up 100 iterations of the formula and returned the last of these as the result. As pointed out by Andrew in his feedback, both these methods used up a lot of (unneccesary) memory. He also mentioned going to a precision. The latest version involves a **while** loop. This tests the difference between each iteration - the more the formula runs, the smaller the difference between each result - and if the difference falls below 0.001 we exit the function and return the result at that iteration. This certainly brings it to a precision but also only performs the required amount of calculation (and avoids any unnecessary use of memory). I was alerted to this method by a classmate and some quick research found the reference below on stackoverflow.com.
+There were two separate challenges in this task - coming up with a theoretical solution to the brief, and then putting that into code.  
+Newton's Method relies on the user guessing a number close to where they thought the square root lay, and then a few reiterations of the formula would narrow it down close enough to the actual answer. There was no mention of a second user input request in the brief, so I had to come with a workaround. I decided to use a random number, lower in value than the user unput, and just use enough iterations to narrow it down as close as I can. For the example given of 14.5, a few iterations would suffice, but for more extreme numbers a lot of iterations would be needed.  
+I had a few attempts at this!  
+I began by importing the **random** module which will let me initialise a random number to calculate against. A function which I named **sqrt()**, is then defined. The first element is the creation of the random number between 1 and the user's inputted number. This is generated by the **random.uniform()** function. This is stored in a variable **A**. My first effort involved running the user's inputted number and the random number **A** through the formula 100 times and **appending** all the results to a **list**. I'd then call the last element in the list as the result. On further investigation I realised I didn't need to store all of the results so I used the **x in range()** method to set up 100 iterations of the formula and return the last of these as the result. As pointed out by Andrew in his feedback, both these methods used up a lot of (unneccesary) memory. He also mentioned going to a precision. The latest version involves a **while** loop. This tests the difference in value between each iteration - the more the formula runs, the smaller the difference between each result - and if the difference falls below 0.001 we exit the function and return the result at that iteration. This certainly brings it to a precision but also only performs an absolutely necessary amount of calculation, and avoids excess use of memory. I was alerted to this method by a classmate and some quick research found the reference below on stackoverflow.com.
 
 For the main program the user is asked to input a positive number which is converted to the type **float**. **If** it is negative, an error message is returned, otherwise the program carries on. The **user_number** is passed through the function **sqrt()**, and the result is then rounded to 1 decimal place as implied in the brief. The **rounded_result** is then printed out.
 
@@ -152,7 +152,7 @@ For the main program the user is asked to input a positive number which is conve
 
 ### Process
 At the time of writing, a lot of this was new, so much research was required! The **sys** module seemed the most appropriate way to deal with arguments in the command line. **sys.argv[1]** allows 2 arguments in the command line - the program name and the filename or path. **'r'** lets us read the file and **'t'** specifies that it is text (as opposed to binary) - although this is probably unneccesary as both are the default values anyway.
-So, if the textfile was in thje same directory as the program, the user could enter the following directly into the command line:
+So, if the textfile was in the same directory as the program, the user could enter the following directly into the command line:
 
     python es.py phadThai.txt
 
@@ -194,10 +194,10 @@ I've included a txt file in the repositry called **phadThai.py** to test the pro
 >*"Write a program called plottask.py that displays a plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes. Some marks will be given for making the plot look nice."*
 
 ### Process
-A big clue was given in the weekly labs so the coding element of this was straight forward enough. I spent most of my time having fun with the formatting possibilities! If this was an important bit of data for presentation I would obviously have toned it down a little and focused on the clearest way to present and visualise the data. Here I took the opportunity to try out colours, line style, linesize, markers, marker formatting, label formatting and positioning.      
-We begin by importing the **NumPy** libray which allows us to perform calculations on an entire array, and **matplotlib.pyplot** lets us draw the plots. These are imported as **np** and **plt** respectively.
-We then create a **numpy.array** with the **range** (0,5) on the x axis. This will result in values from 0 to 4, as the upper trange is non-inclusive. I felt this was implied in the wording of the brief as opposed to the range being[0,4] which would result in the values from 0 to 3 only.
-I worked out the code for each of the formulas and then formatted the various plot elements.
+A big clue was given in the weekly labs so the coding element of this was straight forward enough. I spent most of my time having fun with the formatting possibilities! If this was an important bit of data for presentation I would obviously have toned it down a little and focused on the clearest way to present and visualise the data. Here I took the opportunity to try out colours, line style, linesize, markers, marker formatting, label formatting and positioning.        
+We begin by importing the **NumPy** library which allows us to perform calculations on an entire array, and **matplotlib.pyplot** lets us draw the plots. These are imported as **np** and **plt** respectively.
+We then create a **numpy.array** with the **range** (0,5) on the x axis. This will result in values from 0 to 4, as the upper trange is non-inclusive. I felt this was implied in the wording of the brief as opposed to the range being [0,4] which would result in the values from 0 to 3 only.
+I worked out the code for each of the formulas and then formatted the following plot elements:  
 
 - c = line colour
 - label = name/label of data
@@ -209,8 +209,8 @@ I worked out the code for each of the formulas and then formatted the various pl
 - ls = line style
 - lw = line width
 
-I've included all the various labels, heading, and legend, also with some formatting, plus incorporated a grid (**plt.grid()**) for ease of reading the results.
-I've saved a **png** file of the resultant plot in the repositry - **plotTask.png**
+I've included all the various labels, heading, and legend, also with some formatting, plus incorporated a grid (**plt.grid()**) for ease of reading the results. **plt.xlim(-0.1,4.1)** increases the range of the x axis slightly so the markers on **0** and **4** are completely visible.  
+I've saved a **png** file of the resultant plot in the repositry - **Wee08_plot_task.png**
 
 ### Code
 
@@ -239,7 +239,7 @@ I've saved a **png** file of the resultant plot in the repositry - **plotTask.pn
     plt.ylabel("y axis", fontdict = font2)
     plt.grid()
     plt.legend(loc = 'upper left')
-    plt.xlim(0,4.1)
+    plt.xlim(-0.1,4.1)
     plt.show() 
 
 ### References
