@@ -1,9 +1,9 @@
 # Problem Task 05 (27/02/21)
 
-# Author: Caoimhin Vallely
-
 # This program takes a users inputted number and returns an approximation of its square root using the Newton method. 
 # Use of built-in functions was forbidden!
+
+# Author: Caoimhin Vallely
 
 # Newton's method involves a guess which I don't think was in the remit of this task
 # so I'm going with a random number and sufficient iterations of the formula.

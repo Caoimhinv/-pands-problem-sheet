@@ -24,7 +24,7 @@ We start by using the built-in **input()** function to ask the user to enter the
 ### References
 - variables - https://www.w3schools.com/python/python_variables.asp
 - user input - https://www.w3schools.com/python/python_user_input.asp
-- round - https://stackoverflow.com/questions/18781344/printing-a-variable-value-to-2-decimal-places
+- round - https://stackoverflow.com/questions/18781344/printing-a-variable-value-to-2-decimal-places  
 
 ---
 
@@ -35,19 +35,18 @@ We start by using the built-in **input()** function to ask the user to enter the
 >*"Write a program that asks a user to input a string and outputs every second letter in reverse order."*
 
 ### Process
-We start by using the **input()** function to invite the user to enter a string sentence, which is stored in the variable **sentence**. We reverse the sentence by using a **slice** that steps backwards **[::-1]**, and store the result in the variable **sentence_reverse**. We then skip every second letter of this using a similar method **[::2]** and store the result in a variable called **sentence_skip**, which we then print.
+We start by using the **input()** function to invite the user to enter a string sentence, which is stored in the variable **sentence**. We reverse the sentence by using a **slice** that steps backwards **[::-1]**, and store the result in the variable **sentence_reverse**. We then skip every second letter of this using a similar method **[::2]** and **print()** the result.
 
 ### Code
     
     sentence = input('Please enter a string sentence: ')
     sentence_reverse = sentence[::-1]
-    sentence_skip = sentence_reverse[::2]
-    print(sentence_skip)
+    print(sentence_reverse[::2])
 
 ### References 
 - user input - https://www.w3schools.com/python/python_user_input.asp
 - reversing string - https://www.w3schools.com/python/python_howto_reverse_string.asp
-- returning every second letter of string - https://stackoverflow.com/questions/48873854/python-printing-ever-other-letter-of-a-word
+- returning every second letter of string - https://stackoverflow.com/questions/48873854/python-printing-ever-other-letter-of-a-word  
 
 ---
 
@@ -73,7 +72,7 @@ The first line of code asks the user to input a positive integer with the built 
 ### References 
 - while loops - https://www.w3schools.com/python/python_while_loops.asp
 - user input - https://www.w3schools.com/python/python_user_input.asp
-- modulo operator - https://realpython.com/python-modulo-operator/
+- modulo operator - https://realpython.com/python-modulo-operator/  
 
 ---
 
@@ -84,7 +83,7 @@ The first line of code asks the user to input a positive integer with the built 
 >*"Write a program that outputs whether or not today is a weekday."*
 
 ### Process
-We begin by importing the **datetime** module. From within that, **datetime.today()** gives us the current day. The **weekday()** function lets us represent the days of the week as integers from 0-6 from Monday. So then, using a simple **if/else** condition, we see if the day of the week is less than 5 (Friday or before), in which case it prints the statement *"Still a bloody weekday!! :("*. Otherwise it prints *"Praise the lord it's the weekend!!! :)"*.
+We begin by importing the **datetime** module. From within that, **datetime.today()** gives us the current day. The **weekday()** function lets us represent the days of the week as integers from 0-6 from Monday. So then, using a simple **if/else** condition, we see if the day of the week is less than 4 (Thursday or before), in which case it prints the statement *"Still a bloody weekday!! :("*. If it is 4, then I have a separate statement for Friday! Otherwise it has to be 5/6 so it prints *"Happy days it's the weekend!!! :)"*.
 
 ### Code 
 
@@ -92,12 +91,14 @@ We begin by importing the **datetime** module. From within that, **datetime.toda
     what_day_is_it = datetime.datetime.today().weekday()
     if what_day_is_it < 5:
         print ("Still a weekday!! :(")
+    elif what_day_is_it == 4:
+        print ("Still a weekday but we're very nearly there!!")
     else:
-        print ("Praise the lord it's the weekend!!! :)")
+        print ("Happy days it's the weekend!!! :)")
 
 ### References  
 - how to find if weekday or weekend - https://stackoverflow.com/questions/29384696/how-to-find-current-day-is-weekday-or-weekends-in-python
-- if/else - https://www.w3schools.com/python/python_conditions.asp
+- if/else - https://www.w3schools.com/python/python_conditions.asp  
 
 ---
 
@@ -140,7 +141,8 @@ For the main program the user is asked to input a positive number which is conve
 - rounding numbers - https://www.w3schools.com/python/ref_func_round.asp
 - random float - https://stackoverflow.com/questions/6088077/how-to-get-a-random-number-between-a-float-range
 - range function - https://www.w3schools.com/python/ref_func_range.asp
-- precision - https://stackoverflow.com/questions/20811208/newton-s-method-for-finding-square-roots-in-python
+- precision - https://stackoverflow.com/questions/20811208/newton-s-method-for-finding-square-roots-in-python  
+
 ---
 
 ## Task 06 (07/03/21)
@@ -182,7 +184,7 @@ I've included a txt file in the repositry called **phadThai.py** to test the pro
 - sys.argv[] - https://www.pythonforbeginners.com/system/python-sys-argv
 - try/except - https://www.w3schools.com/python/python_try_except.asp
 - IOError - https://www.tutorialspoint.com/How-to-catch-IOError-Exception-in-Python#:~:text=It%20is%20an%20error%20raised,for%20operating%20system%2Drelated%20errors.
-- IndexError - https://airbrake.io/blog/python/python-indexerror
+- IndexError - https://airbrake.io/blog/python/python-indexerror  
 
 ---
 
@@ -208,9 +210,10 @@ I worked out the code for each of the formulas and then formatted the following 
 - mfc = marker face colour
 - ls = line style
 - lw = line width
+- alpha = transparency (markers, lines, etc.)
 
 I've included all the various labels, heading, and legend, also with some formatting, plus incorporated a grid (**plt.grid()**) for ease of reading the results. **plt.xlim(-0.1,4.1)** increases the range of the x axis slightly so the markers on **0** and **4** are completely visible.  
-I've saved a **png** file of the resultant plot in the repositry - **Wee08_plot_task.png**
+I've saved a **png** file of the resultant plot in the repositry - **plot_task_chart.png**
 
 ### Code
 
@@ -221,11 +224,11 @@ I've saved a **png** file of the resultant plot in the repositry - **Wee08_plot_
 
     ypoints = xpoints
     plt.plot(xpoints, ypoints, c = '#8B008B', label = "f(x)=x", marker = 'o', 
-    ms = 10, mec = '#FFE4C4', mfc = '#FFE4C4', ls = ':', lw = 2)
+    ms = 10, mec = '#FFE4C4', mfc = '#FFE4C4', ls = ':', lw = 2, alpha=0.75)
 
     ypoints = (xpoints ** 2)
     plt.plot(xpoints, ypoints, c = '#00008B', label = "g(x)=x^2", marker = 'o', 
-    ms = 10, mec = '#7FFFD4', mfc = '#7FFFD4', ls = '--', lw = 2)
+    ms = 10, mec = '#7FFFD4', mfc = '#7FFFD4', ls = '--', lw = 2, alpha=0.75)
 
     ypoints = (xpoints ** 3)
     plt.plot(xpoints, ypoints, c = '#696969', label = "h(x)=x^3", marker = 'o', 
@@ -245,6 +248,8 @@ I've saved a **png** file of the resultant plot in the repositry - **Wee08_plot_
 ### References
 - matplotlib - https://www.w3schools.com/python/matplotlib_intro.asp
 - numpy - https://www.w3schools.com/python/numpy_intro.asp
+- colours - https://matplotlib.org/stable/tutorials/colors/colors.html  
+- aplha/transparency - http://www.learningaboutelectronics.com/Articles/How-to-change-the-transparency-of-a-graph-plot-in-matplotlib-with-Python.php  
 
 ---
 # ***THE END***
