@@ -9,8 +9,8 @@
 This repository contains my solutions to the Weekly Problem Tasks for the Programming & Scripting module given by Andrew Beatty.  
 
 - The programs can all be downloaded from this repositry (https://github.com/Caoimhinv/-pands-problem-sheet)
-- They were written in python (version 3.8.3) in Virtual Studio Code (VSC)
-- I run them from Terminal (Mac), but any similar command line interface, iPython, VSC or other standard IDE will suffice - assuming python 3 is installed along with the necessary libraries*
+- They were written in python (version 3.8.3) in Virtual Studio Code (VSCode)
+- I run them from Terminal (Mac), but any similar command line interface, iPython, VSCode or standard IDE will suffice - assuming python 3 is installed along with the necessary libraries*
 - To run each program simply type in **python** followed by the filename**
 
 *`*` The libraries required for each task are specified at the beginning of each script. They were all included with my Anaconda package, but can be easily installed with PIP if necessary*  
@@ -18,14 +18,14 @@ This repository contains my solutions to the Weekly Problem Tasks for the Progra
 
 ---   
 
-## Task 01 (27/01/21)
-- **bmi.py**
+## Task 01 (27/01/21)  
+- **bmi.py**  
 
-### Task 
->*"Write a program that calculates a persons Body Mass Index (BMI). Call the file bmi.py. The inputs are the person's height in centimetres and weight in kilograms. The output is their weight divided by their height in metres squared."*
+### Task  
+>*"Write a program that calculates a persons Body Mass Index (BMI). Call the file bmi.py. The inputs are the person's height in centimetres and weight in kilograms. The output is their weight divided by their height in metres squared."*  
 
-### Process
-We start by using the built-in **input()** function to ask the user to enter their weight and height, which are then stored in 2 variables - **weight** and **height**. The brief asked for the input to be centimetres so I needed to convert the height variable to metres which I stored in another variable **height_metres**. We then enter each of the inputted values into the formula. The brief hinted that the answer should be rounded to 2 decimal places so I used the **round()** function to achieve that. The result is then printed.
+### Process  
+We start by using the built-in **input()** function to ask the user to enter their weight and height, which are then stored in the variables - **weight** and **height**. The brief asked for the input to be in centimetres so I needed to convert the height variable to metres which I did by dividing by 100. This is stored in another variable **height_metres**. We then enter each of the inputted values into the formula. The brief hinted that the answer should be rounded to 2 decimal places so I used the **round()** function to achieve that. The result is then printed.
 
 ### Code 
 
@@ -43,13 +43,13 @@ We start by using the built-in **input()** function to ask the user to enter the
 ---
 
 ## Task 02 (06/02/21)
-- **secondString.py**
+- **secondString.py**  
 
-### Task 
+### Task  
 >*"Write a program that asks a user to input a string and outputs every second letter in reverse order."*
 
-### Process
-We start by using the **input()** function to invite the user to enter a string sentence, which is stored in the variable **sentence**. We reverse the sentence by using a **slice** that steps backwards **[::-1]**, and store the result in the variable **sentence_reverse**. We then skip every second letter of this using a similar method **[::2]** and **print()** the result.
+### Process  
+We start by using the **input()** function to invite the user to enter a string sentence, which is stored in the variable **sentence**. We reverse the sentence by using a **slice** that steps backwards **[::-1]**, and store the result in the variable **sentence_reverse**. We then skip every second letter of this using a similar method **[::2]** and **print()** the result.  
 
 ### Code
     
@@ -57,7 +57,7 @@ We start by using the **input()** function to invite the user to enter a string 
     sentence_reverse = sentence[::-1]
     print(sentence_reverse[::2])
 
-### References 
+### References  
 - user input - https://www.w3schools.com/python/python_user_input.asp
 - reversing string - https://www.w3schools.com/python/python_howto_reverse_string.asp
 - returning every second letter of string - https://stackoverflow.com/questions/48873854/python-printing-ever-other-letter-of-a-word  
@@ -71,8 +71,8 @@ We start by using the **input()** function to invite the user to enter a string 
 >*"Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation. At each step calculate the next value by taking the current value and, if it is even, divide it by two, but if it is odd, multiply it by three and add one. Have the program end if the current value is one."*
 
 ### Process
-The code beings by asking the user to input a positive integer with the **input()** function. We use a **while** loop to test **if** the number is even - modulo division (**%**) by two with 0 remainder - and if so, it gets divided by 2. If not (**else**) it gets multiplied by 3 and 1 added. The **while** loop only continues as long as the number is not equal (**!=**) to 1, at which point the program terminates and the series of numbers is printed.    
-This method didn't print the user's orginal number which seemed required in the brief, so I just added that in before the while loop with a simple **print** statement.  
+The code begins by asking the user to input a positive integer with the **input()** function. We use a **while** loop to test **if** the number is even - modulo division (**%**) by two with 0 remainder - and if so, it gets divided by 2. If not (**else**) it gets multiplied by 3 and 1 added. The **while** loop only continues as long as the number is not equal (**!=**) to 1, at which point the program terminates and the series of numbers is printed.    
+This method didn't print the user's orginal inputted number which seemed required in the brief, so I just added that in before the while loop with a simple **print** statement.  
 
 ### Code 
 
@@ -85,7 +85,7 @@ This method didn't print the user's orginal number which seemed required in the 
             number = (number * 3) + 1
         print(number)
 
-### References 
+### References  
 - while loops - https://www.w3schools.com/python/python_while_loops.asp
 - user input - https://www.w3schools.com/python/python_user_input.asp
 - modulo operator - https://realpython.com/python-modulo-operator/  
@@ -98,7 +98,7 @@ This method didn't print the user's orginal number which seemed required in the 
 ### Task
 >*"Write a program that outputs whether or not today is a weekday."*
 
-### Process
+### Process  
 We begin by importing the **datetime** module. From within that, **datetime.today()** gives us the current day. The **weekday()** function lets us represent the days of the week as integers from 0-6 from Monday. So then, using a simple **if/else** condition, we see **if** the day of the week is less than 4 (Thursday or before), in which case it prints the statement *"Still a bloody weekday!! :("*. If it is 4 (**elif**), then a separate statement for Friday is returned. Otherwise (**else**) it has to be 5 or 6 so it prints *"Happy days it's the weekend!!! :)"*.
 
 ### Code 
@@ -124,14 +124,14 @@ We begin by importing the **datetime** module. From within that, **datetime.toda
 ### Task  
 >*"Write a program that takes a positive floating-point number as input and outputs an approximation of its square root. You should create a function called <tt>sqrt</tt> that does this. I am asking you to create your own sqrt function and not to use the built in functions x ** .5 or math.sqrt(x). This is to demonstrate that you can research and code a process (If you really needed the square root you would use one of the above methods). I suggest that you look at the newton method at estimating square roots."*
 
-### Process 
+### Process  
 There were two separate challenges in this task - coming up with a theoretical solution to the brief, and then putting that into code.  
-Newton's Method relies on the user guessing a number close to where they thought the square root lay, and then a few reiterations of the formula would narrow it down close enough to the actual answer. There was no mention of a second user input request in the brief, so I had to come with a workaround. I decided to use a random number, lower in value than the user unput, and just use enough iterations to narrow it down as close as I can. For the example given of 14.5, a few iterations would suffice, but for more extreme numbers a lot of iterations would be needed.  
+Newton's Method relies on the user guessing a number close to where they thought the square root lay, and then a few iterations of the formula would narrow it down close enough to the actual answer. There was no mention of a second user input request in the brief, so I had to come with a workaround. I decided to use a random number, lower in value than the user unput, and just use enough iterations to narrow it down as close as I can. For the example given of 14.5, a few iterations would suffice, but for more extreme numbers a lot of iterations would be needed.  
 I had a few attempts at this!  
-I began by importing the **random** module which will let me initialise a random number to calculate against. A function which I named **sqrt()**, is then defined. The first element is the creation of the random number between 1 and the user's inputted number. This is generated by the **random.uniform()** function. This is stored in a variable **A**. My first effort involved running the user's inputted number and the random number **A** through the formula 100 times and **appending** all the results to a **list**. I'd then call the last element in the list as the result. On further investigation I realised I didn't need to store all of the results so I used the **x in range()** method to set up 100 iterations of the formula and return the last of these as the result. As pointed out by Andrew in his feedback, both these methods used up a lot of (unneccesary) memory. He also mentioned going to a precision.   
-My latest version involves a **while** loop. This tests the difference in value between each iteration - the more the formula runs, the smaller the difference between each result. The loop continues until the difference falls to below 0.001 at which point we exit the function and return the result at that iteration. This certainly brings it to a precision but also only performs an absolutely necessary amount of calculation, and avoids excess use of memory. I was alerted to this method by a classmate and some quick research found the reference below on stackoverflow.com.
+I began by importing the **random** module which will let me initialise a random number to calculate against. A function which I named **sqrt()**, is then defined. The first element is the creation of the random number between 1 and the user's inputted number. This is generated by the **random.uniform()** function. This is stored in a variable **A**. My first effort involved running the user's inputted number and the random number **A** through the formula 100 times and **appending** all the results to a **list**. I'd then call the last element in the list as the result. On further investigation I realised I didn't need to store all of the results so I used the **i in range()** method to set up 100 iterations of the formula and return the last of these as the result. As pointed out by Andrew in his feedback, both these methods used up a lot of unneccesary memory. He also mentioned going to a precision.   
+My latest version involves a **while** loop. This tests the difference in value between each iteration - the more the formula runs, the smaller the difference between each result. The loop continues until the difference falls to below 0.001 at which point we exit the function and return the result at that stage. This certainly brings it to a precision but also only performs an absolutely necessary amount of calculation, and avoids excess use of memory. I was alerted to this method by a classmate and some quick research found the reference below on stackoverflow.com.  
 
-For the main program the user is asked to **input** a positive number which is converted to the type **float**. **If** it is negative, an error message is returned, otherwise the program carries on. The **user_number** is passed through the function **sqrt()**, and the result is then rounded to 1 decimal place as implied in the brief. The **rounded_result** is then printed out.
+For the main program the user is asked to **input** a positive number which is converted to the type **float**. **If** it is negative, an error message is returned, otherwise the program carries on. The **user_number** is passed through the function **sqrt()**, and the result is then rounded to 1 decimal place as implied in the brief. The **rounded_result** is then printed out.  
 
 ### Code 
 
@@ -171,18 +171,20 @@ For the main program the user is asked to **input** a positive number which is c
 
 ### Process
 At the time of writing, a lot of this was new, so much research was required! The **sys** module seemed the most appropriate way to deal with arguments in the command line.  
-**sys.argv[1]** refers to the 2nd argument in the command line - i.e. the filename (phadThai.txt). The 1st argument [0] would have been the program (es.py). **'r'** lets us read the file and **'t'** specifies that it is text (as opposed to binary) - although this is probably unneccesary as both are the default values anyway. This is stored as **text_file**. 
+**sys.argv[1]** refers to the 2nd argument in the command line - i.e. the filename (phadThai.txt). The 1st argument [0] would have been the program (es.py). **'r'** lets us read the file and **'t'** specifies that it is text (as opposed to binary) - although this is probably unneccesary as both are the default values anyway. This is stored as **text_file**.  
+
 So, if the textfile was in the same directory as the program, the user could enter the following directly into the command line:
 
     python es.py phadThai.txt  
 
-If the file was elsewhere, the filepath would be required, e.g.  
+If the file was elsewhere, the filepath would be required, as follows:
 
     python es.py /Users/caoimhinvallely/Desktop/GMIT Weekly Tasks/Pands-problem-sheet/phadThai.txt  
 
 From here we're in more familiar territory - we **read()** the file, use the **count()** method to count the number of 'e's, and then **print()** the result.   
-I updated this program after week 09 lectures on error handling and in particular **exceptions** which I thought might be appropriate. With the **try** condition the program behaves as expected if everything is entered correctly. The 2 **except** blocks only come into play if there's an error or **exception**. I've isolated the 2 most likely possibilities - 1. incorrect/misspelt filename or path, i.e. the program doesn't recognise or can't find the inputted file. 2. no filename entered at all. After a bit of research I found these exceptions to be **IOError** and **IndexError**. If either of these are raised a helpful bit of advice is printed.  
-I've included a txt file in the repositry called **phadThai.py** to test the program, although any txt file will work once the correct path is inputted.  
+
+I updated this program after week 09 lectures on error handling and in particular **exceptions** which I thought might be appropriate. With the **try** condition the program behaves as expected if everything is entered correctly. The 2 **except** blocks only come into play if there's an error or **exception**. I've isolated the 2 most likely possibilities - 1. incorrect/misspelt filename or path, i.e. the program doesn't recognise or can't find the inputted file. 2. no filename entered at all. After a bit of research I found these exceptions to be **IOError** and **IndexError**. If either of these are raised a helpful bit of advice is printed.   
+I've included a txt file in the repositry called **phadThai.py** to test the program, although any txt file will work once the correct path is inputted.   
 
 ### Code
     
@@ -215,8 +217,8 @@ I've included a txt file in the repositry called **phadThai.py** to test the pro
 
 ### Process
 A big clue was given in the weekly labs so the coding element of this was straight forward enough. I spent most of my time having fun with the formatting possibilities! If this was an important bit of data for presentation I would obviously have toned it down a little and focused on the clearest way to present and visualise the data. Here I took the opportunity to try out colours, line style, linesize, markers, marker formatting, label formatting and positioning.        
-We begin by importing the **NumPy** library which allows us to perform calculations on an entire array, and **matplotlib.pyplot** lets us draw the plots. These are imported as **np** and **plt** respectively.
-We then create a **numpy.array** with the **range** (0,5) on the x axis. This will result in values from 0 to 4, as the upper trange is non-inclusive. I felt this was implied in the wording of the brief as opposed to the range being [0,4] which would result in the values from 0 to 3 only.
+We begin by importing the **NumPy** library which allows us to create and perform calculations on entire arrays, and **matplotlib.pyplot** helps us draw pretty plots. These are imported as **np** and **plt** respectively.
+We then create a **numpy.array** with the **range** (0,5) on the x axis. This will result in values from 0 to 4, as the upper trange is non-inclusive. I felt this was implied in the wording of the brief as opposed to the range being [0,4] which would result in the values from 0 to 3 only.  
 I worked out the code for each of the formulas and then formatted the following plot elements:  
 
 - c = line colour
@@ -228,7 +230,7 @@ I worked out the code for each of the formulas and then formatted the following 
 - mfc = marker face colour
 - ls = line style
 - lw = line width
-- alpha = transparency (for overlapping markers, lines, etc.)
+- alpha = transparency (for overlapping markers, lines, etc.)  
 
 I've included all the various labels, heading, and legend, also with some formatting, plus incorporated a grid (**plt.grid()**) for ease of reading the results. **plt.xlim(-0.1,4.1)** increases the range of the x axis slightly so the markers on **0** and **4** are completely visible.  
 I've saved a **png** file of the resultant plot in the repositry - **plot_task_chart.png**
