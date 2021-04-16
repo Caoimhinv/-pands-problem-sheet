@@ -265,9 +265,9 @@ I've saved a **png** file of the resultant plot in the repositry - **plot_task_c
 
 ### References
 - matplotlib - https://www.w3schools.com/python/matplotlib_intro.asp
-- numpy - https://www.w3schools.com/python/numpy_intro.asp
+- NumPy - https://www.w3schools.com/python/numpy_intro.asp
 - colours - https://matplotlib.org/stable/tutorials/colors/colors.html  
-- aplha/transparency - http://www.learningaboutelectronics.com/Articles/How-to-change-the-transparency-of-a-graph-plot-in-matplotlib-with-Python.php  
+- alpha/transparency - http://www.learningaboutelectronics.com/Articles/How-to-change-the-transparency-of-a-graph-plot-in-matplotlib-with-Python.php  
 
 ---
 # ***THE END***
