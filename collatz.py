@@ -13,9 +13,11 @@
 number = int(input("Please enter a positive integer: "))
 
 # the while loop
+print(number) # example given in the brief suggests the user number should be printed first
 while (number != 1): # stops program when number hits 1
     if number % 2 == 0: # checks if number is even 
         number = number // 2 # if so, divides it by 2
     else:
         number = (number * 3) + 1 # if not, multiplies it by 3 and adds 1
+                                  # Program loops until we reach 1 
     print(number) # prints the result
