@@ -1,8 +1,8 @@
 # Programming and Scripting - Weekly Tasks
 
-## Caoimhin Vallely  
-## G00398568
-## HDip in Data Analytics, GMIT
+## **student_name:** Caoimhin Vallely  
+## **student_number:** G00398568
+## **course:** HDip in Data Analytics, GMIT
 
 ---
 
@@ -13,8 +13,8 @@ This repository contains my solutions to the Weekly Problem Tasks for the Progra
 - I run them from Terminal (Mac), but any similar command line interface, iPython, VSC or other standard IDE will suffice - assuming python 3 is installed along with the necessary libraries*
 - To run each program simply type in **python** followed by the filename**
 
-*`*` The libraries required for each task are specified at the beginning of each script. They are all included with Conda, but can be easily installed with PIP if necessary*
-*`**` Task 06 requires a second argument in the command line but is explained in the relevent instructions*  
+*`*` The libraries required for each task are specified at the beginning of each script. They were all included with my Anaconda package, but can be easily installed with PIP if necessary*  
+*`**` Task 06 requires a second argument in the command line but that is explained in the relevent instructions*  
 
 ---   
 
