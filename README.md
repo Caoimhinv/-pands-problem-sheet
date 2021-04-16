@@ -57,11 +57,13 @@ We start by using the **input()** function to invite the user to enter a string 
 >*"Write a program that asks the user to input any positive integer and outputs the successive values of the following calculation. At each step calculate the next value by taking the current value and, if it is even, divide it by two, but if it is odd, multiply it by three and add one. Have the program end if the current value is one."*
 
 ### Process
-The first line of code asks the user to input a positive integer with the built in **input()** function. I then use a **while** loop to firstly test **if** the number is even (modulo division (**%**) by two with 0 remainder), and if so, it gets divided by 2. If not (**else**) it gets multiplied by 3 and 1 added. The **while** loop only continues as long as the number is not equal (**!=**) to 1, at which point the program terminates ad the series of numbers is printed.
+The first line of code asks the user to input a positive integer with the built in **input()** function. We use a **while** loop to firstly test **if** the number is even (modulo division (**%**) by two with 0 remainder), and if so, it gets divided by 2. If not (**else**) it gets multiplied by 3 and 1 added. The **while** loop only continues as long as the number is not equal (**!=**) to 1, at which point the program terminates ad the series of numbers is printed.  
+This method didn't print the user's orginal number which seemed required in the brief, so I just added that in before the while loop with a simple **print** statement.
 
 ### Code 
 
     number = int(input("Please enter a positive integer: "))
+    print(number)
     while (number != 1):
         if number % 2 == 0:
             number = number // 2
