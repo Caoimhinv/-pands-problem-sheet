@@ -1,8 +1,22 @@
 # Programming and Scripting - Weekly Tasks
 
 ## Caoimhin Vallely  
+## G00398568
+## HDip in Data Analytics, GMIT
 
 ---
+
+This repository contains my solutions to the Weekly Problem Tasks for the Programming & Scripting module given by Andrew Beatty.  
+
+- The programs can all be downloaded from this repositry (https://github.com/Caoimhinv/-pands-problem-sheet)
+- They were written in python (version 3.8.3) in Virtual Studio Code (VSC)
+- I run them from Terminal (Mac), but any similar command line interface, iPython, VSC or other standard IDE will suffice - assuming python 3 is installed along with the necessary libraries*
+- To run each program simply type in **python** followed by the filename**
+
+*`*` The libraries required for each task are specified at the beginning of each script. They are all included with Conda, but can be easily installed with PIP if necessary*
+*`**` Task 06 requires a second argument in the command line but is explained in the relevent instructions*  
+
+---   
 
 ## Task 01 (27/01/21)
 - **bmi.py**
